@@ -1,0 +1,9 @@
+<div class="page">
+  <div class="page__switch">
+    <app-button class="page__button" buttonText="white" [disabled]="false" [buttonBackground]="false" (click)="switchTheme('white')"></app-button>
+    <app-button class="page__button" buttonText="grey" [disabled]="false"  (click)="switchTheme('grey')"></app-button>
+  </div>
+  <div class="page__container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

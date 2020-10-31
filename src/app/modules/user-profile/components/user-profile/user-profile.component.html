@@ -1,0 +1,44 @@
+<ng-template [ngIf]="isLoading" [ngIfElse]="profile"><spinner></spinner> </ng-template>
+
+<ng-template #profile>
+  <a class="user-profile__back" routerLink=""><fa-icon [icon]="faUndo"></fa-icon>&nbsp;Back</a>
+  <div class="user-profile">
+    <users-card
+            *ngIf="user"
+            [user]="user"
+    >
+    </users-card>
+
+    <div class="user-profile__container">
+
+      <div class="box" *ngIf="followers && followers.length > 0">
+        <div class="box__header">
+          <h2 class="box__header-title"><fa-icon [icon]="faUsers"></fa-icon> Followers</h2>
+        </div>
+        <div class="box__body">
+          <div class="user-profile__followers">
+            <div class="user-profile__follower" *ngFor="let follower of followers">
+              <img alt= "user image" class="user-profile__follower-avatar" src="{{follower.avatar_url}}"/>
+              <div class="user-profile__follower-userName">{{follower.login}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" *ngIf="repositories && repositories.length > 0">
+        <div class="box__header">
+          <h2 class="box__header-title"><fa-icon [icon]="faFileCode"></fa-icon> Repositories</h2>
+        </div>
+        <div class="box__body">
+          <div class="user-profile__repositories">
+            <div class="user-profile__repository"*ngFor="let repos of repositories">
+              <a class="user-profile__repository-name"  href="{{repos.html_url}}">{{repos.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ng-template>
+

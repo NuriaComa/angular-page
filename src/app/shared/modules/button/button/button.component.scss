@@ -1,0 +1,28 @@
+@import "~src/assets/css/abstract/variables";
+
+.button {
+  padding: 5px 10px;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: $buttonColor;
+  outline: none;
+  background-color: $white;
+  &:hover {
+    color: $buttonHoverColor;
+    cursor: pointer;
+  }
+  &.background {
+    background-color: $buttonColor;
+    color: $white;
+    &:hover {
+      background-color: $buttonHoverColor;
+      cursor: pointer;
+    }
+  }
+  &.disabled {
+    background-color: $disabled;
+    color: $white;
+    cursor: not-allowed;
+  }
+}

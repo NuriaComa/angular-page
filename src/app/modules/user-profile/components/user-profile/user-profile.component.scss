@@ -1,0 +1,111 @@
+@import "~src/assets/css/abstract/variables";
+.user-profile {
+  display: flex;
+  @media(max-width: 540px) {
+    flex-direction: column;
+  }
+  &__back {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+  &__info {
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    border: 1px solid $grey;
+  }
+  &__avatar {
+    max-width: 30px;
+  }
+  &__userName {
+    color: $grey;
+  }
+  &__followers {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    @media(max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+  &__follower {
+    display: flex;
+    margin: 10px;
+
+    @media(max-width: 540px) {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $softGrey;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &-avatar {
+      max-width: 30px;
+      margin-right: 10px;
+    }
+  }
+  &__repositories {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    @media(max-width: 540px) {
+      flex-direction: column;
+    }
+
+  }
+  &__repository {
+    margin: 10px;
+    color: $black;
+
+    @media(max-width: 540px) {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $softGrey;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &-name {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+.box {
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  height: 50%;
+
+  &__header {
+    padding: 20px;
+    border-bottom: 1px solid $softGrey;
+  }
+  &__body {
+    padding: 20px;
+
+    @media(max-width: 540px) {
+      height: 230px;
+      padding: 0;
+      overflow-y: scroll;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<form class="search-bar" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <input class="search-bar__input" formControlName="searchBar" required>
+  <app-button class="search-bar__button" buttonText="Search" [disabled]="!searchForm.valid"></app-button>
+</form>

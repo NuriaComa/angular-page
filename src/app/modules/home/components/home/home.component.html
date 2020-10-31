@@ -1,0 +1,7 @@
+<div class="page__search-bar">
+  <search-bar (searchData)="searchUsers($event)"></search-bar>
+</div>
+<ng-template [ngIf]="isLoading">
+  <spinner></spinner>
+</ng-template>
+<users class="page__users" [users]="usersData"></users>
