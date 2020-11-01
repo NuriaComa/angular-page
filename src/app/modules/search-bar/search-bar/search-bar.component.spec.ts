@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SearchBarComponent } from './search-bar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from '../../../shared/modules/button/button.module';
+import { SpinnerModule } from '../../../shared/modules/spinner/spinner.module';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -18,7 +18,8 @@ describe('SearchBarComponent', () => {
         RouterTestingModule,
         FormsModule,
         ReactiveFormsModule,
-        ButtonModule
+        ButtonModule,
+        SpinnerModule
       ]
     })
     .compileComponents();

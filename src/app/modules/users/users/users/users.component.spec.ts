@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersComponent } from './users.component';
+import { UsersCardModule } from '../../../../shared/modules/users-card/users-card.module';
+import { SpinnerModule } from '../../../../shared/modules/spinner/spinner.module';
 
 describe('UsersComponent', () => {
   let component: UsersComponent;
@@ -8,7 +10,11 @@ describe('UsersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsersComponent ]
+      declarations: [ UsersComponent ],
+      imports: [
+        UsersCardModule,
+        SpinnerModule
+      ]
     })
     .compileComponents();
   });

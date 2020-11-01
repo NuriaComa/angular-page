@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { SearchService} from './search.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterTestingModule } from "@angular/router/testing";
+import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError, timer } from 'rxjs';
 import { debounce } from 'rxjs/operators';
